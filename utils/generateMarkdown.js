@@ -1,15 +1,17 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+// Return markdown code for badge
+// If no license was selected then don't render anything
 function renderLicenseBadge(license) {
   if (license !== 'None') {
+    // Include appropriate alt text in markdown code
+    // Encode license name for URL usage
     return `![${license} license](https://img.shields.io/badge/license-${encodeURIComponent(license)}-blue.svg)`;
   } else {
     return '';
   }
 }
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+// Return markdown code for License option in Table of Contents section
+// If no license was selected then don't incldue License option in ToC
 function renderLicenseLink(license) {
   if (license !== 'None') {
     return `* [License](#license)
@@ -19,8 +21,8 @@ function renderLicenseLink(license) {
   }
 }
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
+// Return markdown code for License section
+// If no license was selected then don't include License section in README
 function renderLicenseSection(license) {
   if (license !== 'None') {
     return `## License
@@ -32,9 +34,11 @@ This project is licensed under the ${license} license.
   }
 }
 
-// TODO: Create a function to generate markdown for README
+// This function returns the markdown code as a string
+// A data object should include appropriate values when function is called to create markdown code correctly
 function generateMarkdown(data) {
 
+  // Return string literal with values from data object properties
   return `# ${data.projectName}
 ${renderLicenseBadge(data.projectLicense)}
 

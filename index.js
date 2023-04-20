@@ -1,10 +1,10 @@
-// TODO: Include packages needed for this application
-const inquirer = require('inquirer');
-const fs = require('fs');
-const markdown = require ('./utils/generateMarkdown.js')
+// Packages needed for this application
+const inquirer = require('inquirer'); // Inquirer package
+const fs = require('fs'); // File system package
+const markdown = require('./utils/generateMarkdown.js') // Markdown generator package in utils directory
 
+// Constant global variables
 const outputDir = './output';
-
 const licenses = [
     'MIT',
     'APACHE 2.0',
@@ -13,7 +13,7 @@ const licenses = [
     'None'
 ];
 
-// TODO: Create an array of questions for user input
+// Questions used by the Inquirer prompt
 const questions = [
     {
         type: 'input',
@@ -36,21 +36,21 @@ const questions = [
         name: 'projectDescription'
     },
     {
-        type: 'list',
+        type: 'list', // Define a list of options
         message: 'What kind of license should your project have?',
-        choices: licenses,
+        choices: licenses, // Use licenses array as list options
         name: 'projectLicense',
     },
     {
         type: 'input',
         message: 'What command should be run to install dependencies?',
-        default: 'npm i',
+        default: 'npm i', // Provide a default option for end user
         name: 'projectDependencies'
     },
     {
         type: 'input',
         message: 'What command should be run to run tests?',
-        default: 'npm test',
+        default: 'npm test', // Provide a default option for end user
         name: 'projectTests'
     },
     {
@@ -65,30 +65,39 @@ const questions = [
     },
 ];
 
-// TODO: Create a function to write README file
+// This function takes a file name/path and a string of data that will be written to the file
 function writeToFile(fileName, data) {
+    // Write data to file
     fs.writeFile(fileName, data, (err) =>
+    // If there's an error, log it to the console. Otherwise, inform user where they can locate the generated README
         err ? console.log(err) : console.log(`README file succesfully created! You can find it here: '${fileName}'`)
     )
 }
 
-// TODO: Create a function to initialize app
+// Initialize app
 function init() {
+    // Print intro message for end user
+    console.log('Professional README Generator');
+    console.log('=============================');
+    console.log('Please answer the following questions about you and your project to automatically generate a professional README file for your project!');
+
+    // Launch Inquirer prompts using the questions array
     inquirer.prompt(questions)
         .then(response => {
-            // console.log(response);
+            
             console.log('Generating README...');
             
+            // Create an output directory if it doesn't exist
             if (!fs.existsSync(outputDir)) {
                 console.log(`Creating '${outputDir}' directory...`);
                 fs.mkdirSync(outputDir);
             }
 
-            const simplifiedProjectName = response.projectName.replaceAll(' ', '_');
-            const fileName = `${outputDir}/README-${simplifiedProjectName}.md`;
-            const data = markdown(response);
+            const simplifiedProjectName = response.projectName.replaceAll(' ', '_'); // Simplify the name of the project by replacing all spaces in the name with underscores - this is used to create the name of the file
+            const fileName = `${outputDir}/README-${simplifiedProjectName}.md`; // Generate the file path and name
+            const data = markdown(response); // Call function from generateMarkdown module, pass the response object created by the Inquirer prompt. The result will be a string containing markdown code
 
-            writeToFile(fileName, data);
+            writeToFile(fileName, data); // Write the markdown code to the file
 
             return;
         });
@@ -96,5 +105,3 @@ function init() {
 
 // Function call to initialize app
 init();
-// const myObj = {title: 'Hello!'};
-// console.log(mdGen(myObj));
