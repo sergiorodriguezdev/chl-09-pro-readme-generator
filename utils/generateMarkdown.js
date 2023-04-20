@@ -1,10 +1,10 @@
 // Return markdown code for badge
 // If no license was selected then don't render anything
-function renderLicenseBadge(license) {
+function renderLicenseBadge(license, color) {
   if (license !== 'None') {
     // Include appropriate alt text in markdown code
     // Encode license name for URL usage
-    return `![${license} license](https://img.shields.io/badge/license-${encodeURIComponent(license)}-blue.svg)`;
+    return `![${license} license](https://img.shields.io/badge/license-${encodeURIComponent(license)}-${color}.svg)`;
   } else {
     return '';
   }
@@ -40,7 +40,7 @@ function generateMarkdown(data) {
 
   // Return string literal with values from data object properties
   return `# ${data.projectName}
-${renderLicenseBadge(data.projectLicense)}
+${renderLicenseBadge(data.projectLicense, data.badgeColor)}
 
 ## Description
 
