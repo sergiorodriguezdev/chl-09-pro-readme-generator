@@ -2,7 +2,11 @@
 
 ## Project Description
 
+When creating a project on GitHub, you should create a professional README to better engage potential users and contributors. Automating the creation of your README file will allow you to be more productive and focus more time on other aspects of your project. The README generator will guide you through a list of very simple questions, and your responses will be used to automatically create a README for you!
 
+While working on this project, I had the opportunity to apply my knowledge of `npm` to install the necessary dependencies as well as learn [**Inquirer**](https://www.npmjs.com/package/inquirer) more in-depth. I initially built a very basic list of questions which I then expanded to include input validation for questions that require a response from the user. Additionally, I included a question that is only asked based on the response to another question; when the user is prompted to select a license, they are then asked to pick a color for the badge that will be generated only if they pick an option other than `None`.
+
+I really enjoyed learning more about **Inquirer** and creating an app in JavaScript that isn't dependent on HTML or a browser to be executed.
 
 ## Table of Contents
 - [User Story](#user-story)
@@ -49,7 +53,7 @@ To access the code repository, use the link below:
 
 ## Dependencies
 
-To install the appropriate dependencies (**Inquirer v8.2.4**), execute the following command from the repo folder:
+To install the appropriate dependencies ([**Inquirer v8.2.4**](https://www.npmjs.com/package/inquirer/v/8.2.4)), execute the following command from the repo folder:
 
 ```
 npm install
@@ -76,4 +80,10 @@ Click `HERE` for a demo.
 
 ## Screenshots
 
-![](./README-assets/)
+![README Generator Usage](./README-assets/readme-gen-usage.png)
+
+![README Generator Output](./README-assets/readme-gen-output.png)
+
+![README Generator Markdown](./README-assets/readme-gen-md-code.png)
+
+![README Generator Preview](./README-assets/readme-gen-md-preview.png)
