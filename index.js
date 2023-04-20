@@ -1,7 +1,9 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const mdGen = require ('./utils/generateMarkdown.js')
+const markdown = require ('./utils/generateMarkdown.js')
+
+const outputDir = './output';
 
 const licenses = [
     'MIT',
@@ -64,7 +66,11 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, (err) =>
+        err ? console.log(err) : console.log(`README file succesfully created! You can find it here: '${fileName}'`)
+    )
+}
 
 // TODO: Create a function to initialize app
 function init() {
@@ -72,6 +78,18 @@ function init() {
         .then(response => {
             // console.log(response);
             console.log('Generating README...');
+            
+            if (!fs.existsSync(outputDir)) {
+                console.log(`Creating '${outputDir}' directory...`);
+                fs.mkdirSync(outputDir);
+            }
+
+            const simplifiedProjectName = response.projectName.replaceAll(' ', '_');
+            const fileName = `${outputDir}/README-${simplifiedProjectName}.md`;
+            const data = markdown(response);
+
+            writeToFile(fileName, data);
+
             return;
         });
 }
