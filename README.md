@@ -79,7 +79,7 @@ You will be asked a series of questions, some of which are required before proce
 
 ## Walkthrough
 
-https://user-images.githubusercontent.com/119548442/233746593-3c241204-fea8-4da6-904d-cf23450a47a7.mp4
+Click [HERE](https://user-images.githubusercontent.com/119548442/233746593-3c241204-fea8-4da6-904d-cf23450a47a7.mp4) for a walkthrough of the app.
 
 ## Screenshots
 
