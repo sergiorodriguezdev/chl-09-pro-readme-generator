@@ -78,6 +78,8 @@ You will be asked a series of questions, some of which are required before proce
 
 Click [HERE](https://drive.google.com/file/d/14oPPpQlqBb8lrHERlVv0SIZ883IA1TbD/view) for a demo.
 
+https://user-images.githubusercontent.com/119548442/233746593-3c241204-fea8-4da6-904d-cf23450a47a7.mp4
+
 ## Screenshots
 
 ![README Generator Usage](./README-assets/readme-gen-usage.png)
