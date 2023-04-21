@@ -76,7 +76,7 @@ node index.js
 
 You will be asked a series of questions, some of which are required before proceering, and a README file will be generated automatically for you. To avoid overwriting existing README files, the generated READMEs will be saved to the `./output` sub directory and the file name will include your project name. For example, if your project is named "Scientific Calculator" then the path to the README will be `./output/README-Scientific_Calculator.md`.
 
-Click `HERE` for a demo.
+Click [HERE](https://drive.google.com/file/d/14oPPpQlqBb8lrHERlVv0SIZ883IA1TbD/view) for a demo.
 
 ## Screenshots
 

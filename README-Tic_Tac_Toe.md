@@ -1,5 +1,5 @@
 # Tic Tac Toe
-![MIT license](https://img.shields.io/badge/license-MIT-blue.svg)
+![MIT license](https://img.shields.io/badge/license-MIT-red.svg)
 
 ## Description
 
@@ -49,5 +49,5 @@ npm test
 
 ## Questions
 
-If you have any questions about the repo, open an issue or contact me directly at me@sergio.com. You can find more of my work at [sergiorodriguezdev](https://github.com/sergiorodriguezdev).
+If you have any questions about the repo, open an issue or contact me directly at me@sergio.com. You can find more of my work at [sergiorodriguedev](https://github.com/sergiorodriguedev).
   
