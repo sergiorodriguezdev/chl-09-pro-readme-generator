@@ -14,6 +14,7 @@ I really enjoyed learning more about **Inquirer** and creating an app in JavaScr
 - [Links](#links)
 - [Dependencies](#dependencies)
 - [Usage](#usage)
+- [Walkthrough](#walkthrough)
 - [Screenshots](#screenshots)
 
 ## User Story
@@ -76,7 +77,7 @@ node index.js
 
 You will be asked a series of questions, some of which are required before proceering, and a README file will be generated automatically for you. To avoid overwriting existing README files, the generated READMEs will be saved to the `./output` sub directory and the file name will include your project name. For example, if your project is named "Scientific Calculator" then the path to the README will be `./output/README-Scientific_Calculator.md`.
 
-Click [HERE](https://drive.google.com/file/d/14oPPpQlqBb8lrHERlVv0SIZ883IA1TbD/view) for a demo.
+## Walkthrough
 
 https://user-images.githubusercontent.com/119548442/233746593-3c241204-fea8-4da6-904d-cf23450a47a7.mp4
 
