@@ -75,7 +75,7 @@ Clone or download the repo folder to your local machine and install the dependen
 node index.js
 ```
 
-You will be asked a series of questions, some of which are required before proceering, and a README file will be generated automatically for you. To avoid overwriting existing README files, the generated READMEs will be saved to the `./output` sub directory and the file name will include your project name. For example, if your project is named "Scientific Calculator" then the path to the README will be `./output/README-Scientific_Calculator.md`.
+You will be asked a series of questions, some of which are required before proceeding, and a README file will be generated automatically for you. To avoid overwriting existing README files, the generated READMEs will be saved to the `./output` sub directory and the file name will include your project name. For example, if your project is named "Scientific Calculator" then the path to the README will be `./output/README-Scientific_Calculator.md`.
 
 ## Walkthrough
 
